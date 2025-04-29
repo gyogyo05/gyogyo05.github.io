@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>창덕궁 안내</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .chapter{
+            border: solid 1px #47b5ff;
+            width:500px;
+            height:30px;
+            text-align: center;
+            padding:10px;
+            margin: 30px 0 20px 50px;
+            background-color: rgb(205, 241, 255);
+        }
+        .chapter li{
+            list-style-type: none;
+            display: inline;
+            color:#00406a;
+        }
+        .chapter a:link{
+            color:#00406a;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .chapter a:visited{
+            color:rgb(73, 0, 128);
+        }
+        .chapter a:hover{
+            color:#ff0000;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .chapter a:active{
+            color:#ffffff;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        #line{
+            border-bottom: solid 3px #00406a;
+            width: 1000px;
+        }
+        #menu{
+            border: dashed 1px #ff8585;
+            width:500px;
+            height:30px;
+            text-align:center;
+            padding:10px;
+            margin:15px 0 20px 50px;
+            background-color: #ffe4e4;
+        }
+        #menu li{
+            display:inline;
+        }
+        #chang{
+            margin-left: 30px;
+            border-radius: 10%;
+            margin-bottom: 20px;
+        }
+        h2{
+            border-bottom: dashed 1px #ff8585;
+            margin-left: 30px;
+            width:850px;
+        }
+        h3{
+            border-bottom: dotted 1px #ff8585;
+            width:800px;
+            padding-bottom:6px;
+            margin: 10px 0 10px 30px;
+        }
+        #cost{
+            border: solid 1px #ff8585;
+            background-color: #fff2f2;
+            border-radius: 8%;
+            margin-left: 30px;
+            text-align: left;
+            line-height: 150%;
+            width: 500px;
+            height: 150px;
+            padding-left: 20px;
+            padding-top: 6px;
+        }
+        .position{
+            margin-top: 5px;
+            display:inline-block;
+            margin-left: 30px;
+            text-align: center;
+            list-style-type: none;
+        }
+        .position img{
+            border-top-left-radius: 10%;
+            border-bottom-right-radius: 10%;
+        }
+        .underline{
+            border-bottom: solid 1px #cccccc;
+            font-size:18px;
+            font-weight: bold;
+        }
+        .pond{
+            text-align: center;
+            color:#444444;
+        }
+        #way{
+            border: solid 1px #ff8585;
+            background-color: #fff2f2;
+            border-radius: 8%;
+            margin-left: 30px;
+            text-align: left;
+            line-height: 150%;
+            width: 500px;
+            height: 230px;
+            padding-left: 20px;
+            padding-top: 6px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="chapter">
+        <li><a href="예제8-6.html">예제 8-6 |</a></li>
+        <li><a href="예제8-7.html">예제 8-7 |</a></li>
+        <li><a href="예제8-8.html">예제 8-8 |</a></li>
+        <li><a href="예제8-9~10.html">예제 8-9~10 |</a></li>
+        <li><a href="예제8-11.html">예제 8-11 |</a></li>
+        <li><a href="예제8-12.html">예제 8-12</a></li>
+    </ul>
+    <div id ="line">
+    </div>
+    <ul id="menu">
+        <li>창덕궁 소개 |</li>
+        <li>방문 안내 |</li>
+        <li>관람 안내 |</li>
+        <li>개인/단체 체험 |</li>
+        <li>고객센터 |</li>
+        <li>공지사항</li>
+    </ul>
+    <img id="chang" src="창덕궁.jpg" width="750" height="350">
+    <h2>+창덕궁 방문안내</h2>
+    <h3>1. 이용요금</h3>
+    <div id="cost">대인: 3,000원<br/>
+        외국인(만 19세~64세): 3,000원<br/>
+        만 24세 이하 청소년: 무료<br/>
+        만 65세 이상 어르신: 무료<br/>
+        장애인, 유공자: 무료<br/>
+        한복을 착용한 자: 무료
+    </div>
+    <h3>2. 주변볼거리</h3>
+    <ul class="position">
+        <li><img src="애련지.jpeg" width="180" height="130"></li>
+        <li class="underline">애련지</li>
+        <li class="pond">그리 크지 않은 고요한 연못은<br/>
+            ‘연꽃을 사랑한다’는 뜻의<br/>
+            애련지입니다.
+    </ul>
+    <ul class="position">
+        <li><img src="금천교.jpg" width="180" height="130"></li>
+        <li class="underline">금천교</li>
+        <li class="pond">금천(禁川) 위에 세운 돌다리입니다.<br/>
+            현존하는 궁궐의 돌다리 중<br/>
+            가장 오래되었습니다.<br/>
+        </ul>
+    </ul>
+    <ul class="position">
+        <li><img src="부용지 일원.jpg" width="180" height="130"></li>
+        <li class="underline">부용지 일원</li>
+        <li class="pond"> 창덕궁 후원의 첫 중심 정원으로<br/>
+            휴식과 학문, 교육을 하던<br/>
+            비교적 공개된 장소입니다.
+        </li>
+    </ul>
+    <h3>3. 오시는 길</h3>
+    <div id="way"><big>🚇지하철</big><br/>
+        <b>도보 5분</b><br/>
+        3호선 안국역 3번 출구<br/>
+        <b>도보 10분</b><br/>
+        1·3·5호선 종로3가역 7번 출구<br/><br/>
+        <big>🚌버스</big><br/>
+        <b>서울돈화문국악당 하차</b><br/>
+        간선 109, 151, 162, 171, 172, 272, 710
+        지선 7025<br/>
+</body>
+</html>
