@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /* Header/Blog Title */
+        .header{
+            padding: 30px 30px 10px 30px;
+            text-align: center;
+            background: white;
+        }
+
+        .header img{
+            width: 250px;
+        }
+
+        /* Style the top navigation bar */
+        .topnav{
+            overflow: hidden;
+            background-color: #333;
+            text-align: center;
+        }
+
+        /* Style the topnav links */
+        .topnav a{
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn{
+            float: left;
+            width: 100%;
+        }
+
+        .leftcolumn img{
+            background-color: #aaa;
+            width: 90%;
+            padding: 20px;
+        }
+
+        .leftcolumn .arrow{
+            background-color: none;
+            padding: 0;
+            width: 50px;
+        }
+
+        .image-row {
+            display: flex;
+            align-items: center; /* 수직 가운데 정렬 */
+            justify-content: center; /* 가로 가운데 정렬 */
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        .image-row .main-image {
+            height: 450px;
+        }
+
+        .main-image, .arrow {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-row .arrow {
+            height: 50px; /* 원하는 크기로 조절 */
+            cursor: pointer;
+        }
+
+        .main-link {
+            display: flex; /* 이미지 크기에 맞춰서 */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-link img {
+            display: block;
+            height: 450px;
+        }
+
+        /* Add a card effect for articles */
+        .card{
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .image-row {
+                gap: 30px;
+                padding: 0 20px;
+            }
+
+            .image-row .main-image {
+                width: 70%;
+                height: 350px;
+            }
+
+            .image-row .arrow {
+                width: 50px;
+            }
+        }
+
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two column */
+        @media screen and (max-width: 800px){
+            .leftcolumn{
+                width: 100%;
+                padding: 0;
+            }
+            .image-row .main-image {
+                width: 60%;
+                height: 200px;
+            }
+
+            .image-row .arrow {
+                width: 60px;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation */
+        @media screen and (max-width: 400px){
+            .topnav a{
+                float: none;
+                width: 100%;
+            }
+
+            .image-row {
+                flex-direction: column; /* 화살표 + 이미지 세로 정렬 */
+                gap: 10px;
+            }
+
+            .image-row .main-image {
+                width: 80%; /* 너무 작지 않게 유지 */
+                height: auto; /* 비율 유지 */
+            }
+
+            .image-row .arrow {
+            width: 40px;
+            height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="gameimage/겜로그.png">
+    </div>
+
+    <div class="topnav">
+        <a href="index.html">메인</a>
+        <a href="gallery.html">팬 갤러리</a>
+        <a href="today.html">오늘의 추천작</a>
+        <a href="genres.html">장르별 게임 소개</a>
+        <a href="info.html">게임정보 나눔 게시판</a>
+        <a href="mygame.html">내 게임 자랑</a>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>오늘의 추천작</h2>
+                <h5>Today's recommended game</h5>
+                <div class="image-row">
+                    <a href="today.html"><img class="arrow" src="gameimage/leftarrow.png" alt="왼쪽 화살표"></a>
+                    <a href="gameexplain/ex(cook).html" class="main-link"><img class="main-image" src="gameimage/today1r.png" alt="오늘의 추천작"></a>
+                    <img class="arrow" src="gameimage/rightarrow.png" alt="오른쪽 화살표">
+                </div>
+                <p><i><b>Overcooked! 2</b></i></p>
+                <p>I recommend playing as the recommended game of the day.</p>
+            </div>
+            <div class="card">
+                <h2>금주의 추천작</h2>
+                <h5>This week's recommended game</h5>
+                <div class="image-row">
+                    <a href="today.html"><img class="arrow" src="gameimage/leftarrow.png" alt="왼쪽 화살표"></a>
+                    <a href="gameexplain/ex(대역재).html" class="main-link"><img class="main-image" src="gameimage/today2r.png" alt="금주의 추천작"></a>
+                    <img class="arrow" src="gameimage/rightarrow.png" alt="오른쪽 화살표">
+                </div>
+                <p><i><b>The Great Ace Attorney Chronicles</b></i></p>
+                <p>I recommend playing as a recommended game of the week.</p>
+            </div>
+            <div class="card">
+                <h2>이달의 추천작</h2>
+                <h5>This month's recommended game</h5>
+                <div class="image-row">
+                    <a href="today.html"><img class="arrow" src="gameimage/leftarrow.png" alt="왼쪽 화살표"></a>
+                    <a href="gameexplain/ex(human).html" class="main-link"><img class="main-image" src="gameimage/today3r.png" alt="이달의 추천작"></a>
+                    <img class="arrow" src="gameimage/rightarrow.png" alt="오른쪽 화살표">
+                </div>
+                <p><i><b>Human Fall Flat</b></i></p>
+                <p>I recommend playing as a recommended game of the month.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <h4>&copy; 2025 겜로그. All rights reserved.</h4>
+    </div>
+</body>
+</html>

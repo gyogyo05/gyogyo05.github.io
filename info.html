@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /* Header/Blog Title */
+        .header{
+            padding: 30px 30px 10px 30px;
+            text-align: center;
+            background: white;
+        }
+
+        .header img{
+            width: 250px;
+        }
+
+        /* Style the top navigation bar */
+        .topnav{
+            overflow: hidden;
+            background-color: #333;
+            text-align: center;
+        }
+
+        /* Style the topnav links */
+        .topnav a{
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn{
+            float: left;
+            width: 20%;
+        }
+
+        .leftcolumn img{
+            background-color: none;
+            width: 100%;
+            padding: 10px;
+        }
+
+        /* Right column */
+        .centercolumn{
+            float: left;
+            width: 20%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+            text-align: center;
+        }
+
+        .rightcolumn{
+            float: left;
+            width:60%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+
+        .rightcolumn p{
+            padding-left: 30px;
+            padding-bottom: 20px;
+            border-bottom: solid #aaa 1px;
+        }
+
+        p.lastp{
+            padding-left: 30px;
+            margin-bottom: 0;;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .rightcolumn h4{
+            margin-top: 15px;
+            float: right;
+            padding: 0;
+        }
+
+        /* Add a card effect for articles */
+        .card{
+            background-color: white;
+            padding: 25px;
+            margin-top: 20px;
+            height: 380px;
+        }
+
+        .cardp{
+            background-color: white;
+            padding: 25px;
+            margin-top: 20px;
+            height: 380px;
+        }
+
+        .card img{
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        /* Clear floats after the columns */
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 10px 20px 0 0;
+        }
+
+        .search-box input {
+            padding: 6px 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-box button {
+            padding: 6px 12px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            background-color: #333;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background-color: #555;
+        }
+
+        .friend-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin: 10px 20px 10px 0;
+        }
+
+        .friend-buttons button {
+            padding: 6px 12px;
+            font-size: 14px;
+            background-color: #444;
+            color: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .friend-buttons button:hover {
+            background-color: #666;
+        }
+
+        /* Footer */
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        .more-link{
+            text-align: right;
+            padding: 20px 0 10px 0;
+        }
+        .more-link a{
+            color: #000000;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .more-link a:hover{
+            text-decoration: underline;
+        }
+        
+        @media screen and (max-width: 1430px){
+            .card{
+                padding: 10px 0 0 0;
+            }
+            .cardp {
+                overflow: auto;
+            }
+        }
+        /* 화면 너비가 800px 이하일 때 */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .centercolumn, .rightcolumn {
+                width: 100%;
+                float: none;
+                padding: 0 10px;
+            }
+            .cardp {
+                overflow: auto;
+            }
+            .card img{
+                width: 50%;
+                height: 300px;
+                display: block;
+                margin: 0 auto;
+            }
+            .row {
+                display: block;
+            }
+        }
+
+
+        /* 화면 너비가 400px 이하일 때 */
+        @media screen and (max-width: 400px) {
+            .topnav a{
+                float: none;
+                width: 100%;
+            }
+            .card {
+                overflow: auto;
+            }
+            .card img{
+                width: 90%;
+                height: 300px;
+                display: block;
+                margin: 0 auto;
+            }
+            .row {
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="gameimage/겜로그.png">
+    </div>
+
+    <div class="topnav">
+        <a href="index.html">메인</a>
+        <a href="gallery.html">팬 갤러리</a>
+        <a href="today.html">오늘의 추천작</a>
+        <a href="genres.html">장르별 게임 소개</a>
+        <a href="info.html">게임정보 나눔 게시판</a>
+        <a href="mygame.html">내 게임 자랑</a>
+    </div>
+
+    <div class="row">
+
+        <div class="search-box">
+            <input type="text" placeholder="친구 찾기..." />
+            <button type="submit">검색</button>
+        </div>
+
+        <div class="friend-buttons">
+            <button>친구목록 확인하기</button>
+            <button>메신저함</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <a href="gameexplain/ex(moon)(2).html"><img src="gameimage/리뷰1.png"></a>
+            </div>
+        </div>
+        <div class="centercolumn">
+            <div class="card">
+                <h2>To the Moon</h2>
+                <h2>★★★★★</h2>
+                <h2>장르</h2>
+                <p>인디게임</p>
+                <h2>출시 연도</h2>
+                <p>2011</p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="cardp">
+                <p>자라나는 강낭콩 - 중간중간 퍼즐이 계속 나오는데, 처음엔 좀 어렵다가 나중에 익숙해지면 쉬움 그러니까 모... </p>
+                <p>옹달샘 퐁당퐁당 - 평가가 좋길래 별 생각 없이 플레이 중이었는데 스토리가 너무 탄탄해서 울어버렸어요 근... </p>
+                <p>생강차 - 이거 첨에 무조건 남캐로 플레이해야 함 왜냐면 그게 재밌음 ㅋㅋ 캐릭터성이 모두 뚜렷했었고 재미... </p>
+                <p>인디마니아 - 요근래 플레이한 게임 중 단연 최고라고 할 수 있겠다. 숨어있는 보석이기 때문에 모두들 해보시... </p>
+                <p class="lastp">갈릭소스 - 어떤 스트리머가 이거 하는 거 봤는데 넘 재밌어 보여서 저도 깔았어요 ㅋㅋ 역시 기대를 져버리지... </p>
+                <div class="more-link">
+                    <a href="#">
+                        ▶ 더보기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <a href="gameexplain/ex(dark)(2).html"><img src="gameimage/리뷰2.png"></a>
+            </div>
+        </div>
+        <div class="centercolumn">
+            <div class="card">
+                <h2>Darkest Dungeon</h2>
+                <h2>★★★★☆</h2>
+                <h2>장르</h2>
+                <p>인디게임</p>
+                <h2>출시 연도</h2>
+                <p>2016</p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="cardp">
+                <p>ROCK - 매 판 함께 생사 넘나들며 싸워준 정든 용병 죽으면 감정쓰나미 몰려오고 희노애락 느끼기 참 좋은 게... </p>
+                <p>마르지엘라 - 영웅의 정신과 플레이어의 정신이 같이 터지는 게임입니다. 그래도 그 재미로 하는 게임입니다... </p>
+                <p>지나가는 이과생 - 확률이 사람을 어디까지 비참하게 만들 수 있는지 보여주는 대표적인 사례. 그래도 게임 자... </p>
+                <p>수채화 - 칠흑까지 클리어했는데, 난이도는 살인적임 난이도도 난이도인데, 억지(치명타, 빗나감, 회피 등) 요...</p>
+                <p class="lastp">HeyDog - 턴제 RPG에 대한 생각을 "많이" 바꾸게 만든 게임. 일반적인 게임에선 한번 정도의 실수는 용인해... </p>
+                <div class="more-link">
+                    <a href="#">
+                        ▶ 더보기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <a href="gameexplain/ex(역재123)(2).html"><img src="gameimage/리뷰3.png"></a>
+            </div>
+        </div>
+        <div class="centercolumn">
+            <div class="card">
+                <h2>역전재판 123</h2>
+                <h2>★★★☆☆</h2>
+                <h2>장르</h2>
+                <p>법정배틀, 추리</p>
+                <h2>출시 연도</h2>
+                <p>2005</p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="cardp">
+                <p>SONIC - 와 이걸 드디어 엔딩을 다 봤다 사실 다 본건 어제인데 마지막 달성과제를 못 얻는 바람에 마지막 에... </p>
+                <p>역재광인 - 역전재판, 나의 사랑. 역전재판, 나의 빛. 역전재판, 나의 어둠. 역전재판, 나의 삶. 역전재판, 나...</p>
+                <p>대머리재판장 - 게임을 하다가 "이게 무슨 재판이야, 개판이지" 라는생각이 든다면 당신은 게임을 100% 즐기...</p>
+                <p>명언제조기 - 나루호도씨! 발상을 역전시켜봐요. 이의있음! 접시 나르고 돈다발을 받을 수 있다면 검사 따위 때...</p>
+                <p class="lastp">캡콤팬 - 오늘부터 지지관계에서 벗어나, 캡콤과 나는 한몸으로 일체가 된다. 캡콤에 대한 공격은 나에 대한 공...</p>
+                <div class="more-link">
+                    <a href="#">
+                        ▶ 더보기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="footer">
+        <h4>&copy; 2025 겜로그. All rights reserved.</h4>
+    </div>
+</body>
+</html>

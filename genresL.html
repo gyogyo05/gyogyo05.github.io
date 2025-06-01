@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /* Header/Blog Title */
+        .header{
+            padding: 30px 30px 10px 30px;
+            text-align: center;
+            background: white;
+        }
+
+        .header img{
+            width: 250px;
+        }
+
+        /* Style the top navigation bar */
+        .topnav{
+            overflow: hidden;
+            background-color: #333;
+            text-align: center;
+        }
+
+        /* Style the topnav links */
+        .topnav a{
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn{
+            float: left;
+            width: 100%;
+        }
+
+        .leftcolumn img{
+            background-color: #aaa;
+            width: 90%;
+            padding: 20px;
+        }
+
+        .leftcolumn .arrow{
+            background-color: none;
+            padding: 0;
+            width: 50px;
+        }
+
+        .image-row {
+            display: flex;
+            flex-wrap: wrap; 
+            align-items: center; /* 수직 가운데 정렬 */
+            justify-content: center; /* 가로 가운데 정렬 */
+            gap: 10px;
+        }
+
+        .image-row .main-image {
+            margin: 20px;
+            padding: 0;
+            width: 300px;
+            height: 190px;
+        }
+
+        .image-row .arrow {
+            height: 50px; /* 원하는 크기로 조절 */
+            cursor: pointer;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 10px 20px 0 0;
+        }
+
+        .search-box input {
+            padding: 6px 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-box button {
+            padding: 6px 12px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            background-color: #333;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background-color: #555;
+        }
+
+
+        /* Add a card effect for articles */
+        .card{
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two column */
+        @media screen and (max-width: 800px){
+            .leftcolumn {
+                width: 100%;
+                padding: 0;
+            }
+
+            .image-row .main-image {
+                width: 60%;
+                height: 200px;
+            }
+
+            .image-row .arrow {
+                width: 50px;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation */
+        @media screen and (max-width: 400px){
+            .topnav a{
+                float: none;
+                width: 100%;
+            }
+            .image-row .main-image {
+                width: 40%;
+                height: 100px;
+            }
+
+            .image-row .arrow {
+                width: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="gameimage/겜로그.png">
+    </div>
+
+    <div class="topnav">
+        <a href="index.html">메인</a>
+        <a href="gallery.html">팬 갤러리</a>
+        <a href="today.html">오늘의 추천작</a>
+        <a href="genres.html">장르별 게임 소개</a>
+        <a href="info.html">게임정보 나눔 게시판</a>
+        <a href="mygame.html">내 게임 자랑</a>
+    </div>
+
+    <div class="row">
+        <div class="row">
+        <div class="search-box">
+            <input type="text" placeholder="게임 검색..." />
+            <button type="submit">검색</button>
+        </div>
+
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>■ 시뮬레이션</h2>
+                <div class="image-row">
+                    <img class="arrow" src="gameimage/leftarrow.png" alt="왼쪽 화살표">
+                    <a href="gameexplain/ex(sec).html"><img class="main-image" src="gameimage/시뮬레이션0.png" alt="60초!"></a>
+                    <a href="gameexplain/ex(sim1)(0).html"><img class="main-image" src="gameimage/시뮬레이션1.png" alt="심즈4"></a>
+                    <a href="gameexplain/ex(sdew)(0).html"><img class="main-image" src="gameimage/시뮬레이션2.png" alt="스타듀밸리"></a>
+                    <a href="genres.html"><img class="arrow" src="gameimage/rightarrow.png" alt="오른쪽 화살표"></a>
+                </div>
+            </div>
+            <div class="card">
+                <h2>■ 인디 게임</h2>
+                <div class="image-row">
+                    <img class="arrow" src="gameimage/leftarrow.png" alt="왼쪽 화살표">
+                    <a href="gameexplain/ex(night).html"><img class="main-image" src="gameimage/인디0.png" alt="나이트 인 더 우즈"></a>
+                    <a href="gameexplain/ex(moon)(0).html"><img class="main-image" src="gameimage/인디1.png" alt="투더문"></a>
+                    <a href="gameexplain/ex(terr)(0).html"><img class="main-image" src="gameimage/인디2.png" alt="테라리아"></a>
+                    <a href="genres.html"><img class="arrow" src="gameimage/rightarrow.png" alt="오른쪽 화살표"></a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <h4>&copy; 2025 겜로그. All rights reserved.</h4>
+    </div>
+</body>
+</html>

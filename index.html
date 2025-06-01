@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /* Header/Blog Title */
+        .header{
+            padding: 30px 30px 10px 30px;
+            text-align: center;
+            background: white;
+        }
+
+        .header img{
+            width: 250px;
+        }
+
+        /* Style the top navigation bar */
+        .topnav{
+            overflow: hidden;
+            background-color: #333;
+            text-align: center;
+        }
+
+        /* Style the topnav links */
+        .topnav a{
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn{
+            float: left;
+            width: 100%;
+        }
+
+        .leftcolumn img{
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .card{
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .section_wrap {
+            display: flex;
+            justify-content: center; /* 가운데 정렬 */
+            gap: 40px; /* 섹션 사이 간격 */
+            margin: 5px auto;
+            max-width: 1300px;
+        }
+        .section {
+            margin: 10px;
+            width: 700px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            color: black;
+        }
+
+        /* Clear floats after the columns */
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two column */
+        @media screen and (max-width: 800px){
+            .leftcolumn{
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation */
+        @media screen and (max-width: 400px){
+            .topnav a{
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="gameimage/겜로그.png">
+    </div>
+
+    <div class="topnav">
+        <a href="index.html">메인</a>
+        <a href="gallery.html">팬 갤러리</a>
+        <a href="today.html">오늘의 추천작</a>
+        <a href="genres.html">장르별 게임 소개</a>
+        <a href="info.html">게임정보 나눔 게시판</a>
+        <a href="mygame.html">내 게임 자랑</a>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>최고 인기 게임</h2>
+                <h5>the most popular game</h5>
+                <a href="gameexplain/ex(bio4).html"><img src="gameimage/인기작1.jpg" style="height: 450px;"></a>
+                <p>현재 최고 인기 게임 (판매 수익 순)</p>
+                <p>It's currently the most popular game in the order of sales revenue, so I recommend playing it.</p>
+            </div>
+            <div class="card">
+                <h2>최다 플레이 게임</h2>
+                <h5>Most Played Games</h5>
+                <a href="gameexplain/ex(dia4).html"><img src="gameimage/인기작2.jpg" style="height: 450px;"></a>
+                <p>최다 플레이 게임 (현재 플레이어 수 기준)</p>
+                <p>Based on the current number of players, this is the most played game at the moment, so I recommend playing.</p>
+            </div>
+            <div class="section_wrap">
+                <div class="section">
+                    <h2>■ 게임뉴스</h2>
+                        <div class="card">- [2025-05-24] 유명 스트리머 ‘루비냥’, 자작 게임 ‘냥냥월드’ 공개</div>
+                        <div class="card">- [2025-05-23] ‘에코런너즈’ 환경 캠페인 콜라보 스킨 출시</div>
+                        <div class="card">- [2025-05-22] 인기 게임 ‘파퓰러’ 대규모 업데이트 예고!</div>
+                        <div class="card">- [2025-05-21] ‘Dream 어드벤처’ 후속작 개발 발표</div>
+                    </div>
+
+                <div class="section">
+                    <h2>■ 업데이트 소식</h2>
+                        <div class="card">- ‘소드 앤 매직’ 길드 콘텐츠 확장 업데이트</div>
+                        <div class="card">- ‘타워 디펜더’ 신규 맵 2종 추가</div>
+                        <div class="card">- ‘It takes two’ 멀티플레이 기능 개선</div>
+                        <div class="card">- ‘제 5의 인격’ 신규 캐릭터 추가 및 밸런스 패치</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <h4>&copy; 2025 겜로그. All rights reserved.</h4>
+    </div>
+</body>
+</html>

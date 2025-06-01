@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>게임 설명</title>
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial;
+        padding: 10px;
+        background: #f1f1f1;
+        margin: 0;
+    }
+
+    .header {
+        padding: 30px 30px 10px 30px;
+        text-align: center;
+        background: white;
+    }
+
+    .header img {
+        width: 250px;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .topnav a {
+        display: inline-block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .leftcolumn {
+        width: 100%;
+    }
+
+    .card {
+        background-color: white;
+        padding: 20px 20px 80px 20px;
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+        margin-top: 20px;
+    }
+
+    #new h3 {
+        margin: 0 300px;
+        padding-bottom: 5px;
+        border-bottom: solid 2px #333;
+    }
+
+    #new h3 span {
+        color: #7411b6;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #content-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    #pic img {
+        padding: 30px;
+        width: 330px;
+        height: auto;
+    }
+
+    #explain {
+        max-width: 400px;
+        font-family: "HY중고딕";
+    }
+
+    #title h2 {
+        color: #333;
+        font-size: 25px;
+    }
+
+    #memo {
+        margin-top: 10px;
+        font-size: 15px;
+        color: #aaa;
+    }
+
+    #button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        margin-top: 0;
+    }
+
+    #button li {
+        display: inline-block;
+    }
+
+    #button li a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    #button li a:hover, #button li a:active {
+        font-size: 16px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    #return {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    /* 반응형 */
+    @media screen and (max-width: 800px) {
+      .leftcolumn {
+        width: 100%;
+        padding: 0;
+      }
+
+      #new h3 {
+        margin: 0 20px;
+      }
+
+      #content-wrap {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #pic img, #explain {
+        width: 100%;
+        max-width: 90%;
+        text-align: center;
+      }
+
+      #button {
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .topnav a {
+        float: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="../gameimage/겜로그.png" alt="겜로그 로고" />
+  </div>
+
+  <div class="topnav">
+    <a href="../index.html">메인</a>
+    <a href="../gallery.html">팬 갤러리</a>
+    <a href="../today.html">오늘의 추천작</a>
+    <a href="../genres.html">장르별 게임 소개</a>
+    <a href="../info.html">게임정보 나눔 게시판</a>
+    <a href="../mygame.html">내 게임 자랑</a>
+  </div>
+
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <div id="new">
+          <h3><span>게임 설명</span> Game Description</h3>
+        </div>
+        <div id="content-wrap">
+          <div id="pic">
+            <img src="../gameimage/stv.png">
+          </div>
+          <div id="explain">
+            <ul>
+              <li id="title"><h2>Don't Starve</h2></li>
+              <li id="memo">
+                Don’t Starve: Pocket Edition은 PC에서<br/>
+                6백만 명 이상의 플레이어가 즐기는 게임을 Android로<br/>
+                가져온 게임입니다. 이제 과학과 마법이 가득하고 무자비한<br/>
+                야생 생존 게임을 이동 중에도 즐기세요!<br/>
+                수수께끼의 야생 세계에 내던져지고<br/>
+                이곳에 갇히게 된 대담한 신사 과학자인<br/>
+                윌슨이 되어 탐험해 보세요.<br/>
+                출시: 2015. 07. 09.<br/>
+                채널: 공식사이트<br/>
+                제작: 클레이 엔터테인먼트<br/>
+                배급: 클레이 엔터테인먼트<br/>
+                장르: 어드벤처<br/>
+                등급: 전체 이용가</li>
+            </ul>
+            <ul id="button">
+              <li id="return"><a href="../genresR.html">이전으로</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h4>&copy; 2025 겜로그. All rights reserved.</h4>
+  </div>
+</body>
+</html>
